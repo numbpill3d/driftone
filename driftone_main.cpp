@@ -1,5 +1,5 @@
 /*
- * Driftone Mini - ESP32 Beat Sequencer
+ * DriftRiff Mini - ESP32 Beat Sequencer
  * Main Application File
  */
 
@@ -26,19 +26,13 @@
 // SD card pins
 #define SD_CS      15
 
-// Touch pins (4-wire resistive)
-#define YP A2  // must be an analog pin
-#define XM A3  // must be an analog pin  
-#define YM 14  // can be a digital pin
-#define XP 27  // can be a digital pin
-
 // Touch pressure range
 #define MINPRESSURE 10
 #define MAXPRESSURE 1000
 
 // Global objects
 Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_MOSI, TFT_CLK, TFT_RST, TFT_MISO);
-TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300);
+TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300); // 300 ohm resistance typical for most resistive screens
 
 Sequencer sequencer;
 UI ui;
