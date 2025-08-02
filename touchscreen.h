@@ -8,6 +8,12 @@
 #include <TouchScreen.h>
 #include <Adafruit_ILI9341.h>
 
+// Touch pins - Updated for ESP32 GPIO capabilities
+#define YP 34  // Y+ must be analog capable (input-only on ESP32)
+#define XM 33  // X- must be output capable
+#define YM 14  // Y- can be any digital pin
+#define XP 32  // X+ must be analog capable
+
 // Touch calibration values (adjust based on your screen)
 #define TS_MINX 150
 #define TS_MINY 120
