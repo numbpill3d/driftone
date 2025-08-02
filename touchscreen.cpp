@@ -26,9 +26,10 @@ TSPoint TouchHandler::getTouch() {
   
   TSPoint p = touchScreen->getPoint();
   
-  // Restore pins for TFT use
+  // Restore pins for TFT use (ESP32 specific)
+  // Note: GPIO34 is input-only, so we only set XM to OUTPUT
   pinMode(XM, OUTPUT);
-  pinMode(YP, OUTPUT);
+  // YP (GPIO34) is input-only on ESP32, no need to set mode
   
   return p;
 }
