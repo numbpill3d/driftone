@@ -1,4 +1,4 @@
-# DriftRiff Mini - ESP32 Beat Sequencer
+# Driftone Mini - ESP32 Beat Sequencer
 
 A handheld lo-fi beat sequencer inspired by the Elektron Model:Samples, built with ESP32 and Adafruit ILI9341 touchscreen.
 
